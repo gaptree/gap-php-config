@@ -6,9 +6,10 @@
 use Gap\Config\ConfigBuilder;
 
 $settingDir = '/your/setting/dir';
+$cacheFile = '/your/setting/cache-file';
 $configBuilder = new ConfigBuilder(
-    __DIR__ . '/setting',
-    $this->cacheFile
+    $settingDir,
+    $cacheFile
 );
 
 $config = $configBuilder->build();
