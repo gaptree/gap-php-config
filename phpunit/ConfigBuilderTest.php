@@ -34,6 +34,8 @@ class ConfigBuilderTest extends TestCase
             $config->config('session')->str('cookie_domain')
         );
 
+        $this->assertFalse($config->bool('debug'));
+
         $cacheArr = require $this->cacheFile;
         $this->assertEquals(
             'www.gaptree.com',

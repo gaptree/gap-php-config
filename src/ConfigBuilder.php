@@ -43,8 +43,8 @@ class ConfigBuilder
         $loader->loadFile($this->settingDir . '/setting.local.php');
         $loader->loadFile($this->settingDir . '/setting.app.php');
 
-        $loader->loadDir($this->settingDir . '/sys');
-        $loader->loadDir($this->settingDir . '/enabled');
+        $loader->loadDir($this->settingDir . '/system');
+        $loader->loadDir($this->settingDir . '/custom');
         $loader->loadDir($this->settingDir . '/local');
 
         $baseDir = $loader->get('baseDir');
